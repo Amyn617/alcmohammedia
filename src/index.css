@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar-item {
+  cursor: pointer;
+}
+
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #0284c7;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+.navbar-link:hover::before {
+  width: 100%;
+}
+
+.navbar-link {
+  position: relative;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+/* HeroSection.css */
+
+.text-gradient {
+  background: linear-gradient(45deg, #ff007f, #fff, #00cfff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 8s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 50% 0%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+/* Add this to your CSS file */
+.backdrop-blur {
+  position: fixed; /* Ensure it covers the entire viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px); /* Adjust the blur amount */
+  z-index: 40; /* Layer it below the navbar but above other content */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* Optional semi-transparent background */
+  z-index: 39; /* Ensure it's below the backdrop blur */
+  pointer-events: auto; /* Allow interaction */
+  display: none; /* Hide by default */
+}
+
+.overlay.active {
+  display: block; /* Show when active */
+}
