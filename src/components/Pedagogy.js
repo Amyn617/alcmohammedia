@@ -25,7 +25,7 @@ const Pedagogy = () => {
 
         <div className="rounded-lg overflow-hidden">
           <img
-            src="./assets/images/1.jpg"
+            src="./assets/images/alc.jpeg"
             width="520"
             height="270"
             loading="lazy"
@@ -38,7 +38,7 @@ const Pedagogy = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 lg:gap-20 px-10 md:py-10">
         <div className="rounded-lg overflow-hidden">
           <img
-            src="./assets/images/5.jpg"
+            src="./assets/images/alc2.jpg"
             width="520"
             height="470"
             loading="lazy"
