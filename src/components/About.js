@@ -12,7 +12,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 max-sm:gap-7 gap-10 lg:gap-20 md:py-10 px-10">
         <div className="img-holder rounded-lg overflow-hidden">
           <img
-            src="./assets/images/alc2.jpg"
+            src={`${process.env.PUBLIC_URL}/assets/images/alc2.jpg`}
             width="520"
             height="370"
             loading="lazy"

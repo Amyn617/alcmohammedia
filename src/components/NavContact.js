@@ -7,7 +7,7 @@ import {
 
 const NavContact = () => {
   return (
-    <div className="hidden xl:flex items-center justify-center bg-black text-white p-3 text-base">
+    <div className="hidden xl:flex items-center justify-center  bg-blue-950 text-white p-3 text-base">
       <ul className="nav-contact flex gap-28">
         <li className="flex items-center">
           <a

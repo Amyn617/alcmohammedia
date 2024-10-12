@@ -58,11 +58,11 @@ const NavBar = () => {
   return (
     <div className="sticky z-50 top-0">
       <div className="flex items-center justify-between px-10 xl:px-20 bg-white shadow-md">
-        <img
-          src="./assets/images/logo.svg"
+        <a href="/"><img
+          src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
           alt="ALC Mohammedia"
           className="w-56"
-        />
+        /></a>
         {/* Overlay for sidebar */}
         <div
           className={`fixed inset-0 bg-black z-40 transition-opacity duration-500 ${
@@ -80,7 +80,7 @@ const NavBar = () => {
           }`}
         >
           <li>
-            <a href="/" className=" hover:text-sky-600 transition-all">
+            <a href="Home" className=" hover:text-sky-600 transition-all">
               {t("home")}
             </a>
           </li>
@@ -90,7 +90,7 @@ const NavBar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <a
-              href="#"
+              href="Registration"
               className="flex items-center hover:text-sky-600 transition-all"
             >
               {t("registration")}
@@ -105,7 +105,7 @@ const NavBar = () => {
             >
               <li>
                 <a
-                  href="#"
+                  href="Registration"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("new_students")}
@@ -113,7 +113,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="Registration"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("continuing_students")}
@@ -121,7 +121,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="Registration"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("returning_students")}
@@ -130,97 +130,98 @@ const NavBar = () => {
             </ul>
           </li>
           <li
-            className="relative"
-            onMouseEnter={() => handleMouseEnter("english")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a
-              href="#"
-              className="flex items-center hover:text-sky-600 transition-all"
-            >
-              {t("english_program")}
-              <FaChevronDown className="ml-2 text-sm" />
-            </a>
-            <ul
-              className={`${
-                activeDropdown === "english"
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible translate-y-2"
-              } absolute top-full left-0 mt-2 bg-white backdrop-blur-md border border-gray-200 min-w-[220px] transition-all duration-300 ease-in-out z-50`}
-            >
-              <li>
-                <a
-                  href="#"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
-                >
-                  {t("general_english")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
-                >
-                  {t("business_english")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
-                >
-                  {t("conversational_english")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
-                >
-                  {t("skill_based_classes")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
-                >
-                  {t("academic_english")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
-                >
-                  {t("exam_preparation")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
-                >
-                  {t("baccalaureat_program")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
-                >
-                  {t("private_courses")}
-                </a>
-              </li>
-            </ul>
-          </li>
+  className="relative"
+  onMouseEnter={() => handleMouseEnter("english")}
+  onMouseLeave={handleMouseLeave}
+>
+  <div
+    href=""
+    className="flex items-center hover:text-sky-600 transition-all cursor-pointer"
+  >
+    {t("english_program")}
+    <FaChevronDown className="ml-2 text-sm" />
+  </div>
+  <ul
+    className={`${
+      activeDropdown === "english"
+        ? "opacity-100 visible translate-y-0"
+        : "opacity-0 invisible translate-y-2"
+    } absolute top-full left-0 mt-2 bg-white backdrop-blur-md border border-gray-200 min-w-[220px] transition-all duration-300 ease-in-out z-50`}
+  >
+    <li>
+      <a
+        href="EnglishProgram#general-english"
+        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+      >
+        {t("general_english")}
+      </a>
+    </li>
+    <li>
+      <a
+        href="EnglishProgram#business-english"
+        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+      >
+        {t("business_english")}
+      </a>
+    </li>
+    <li>
+      <a
+        href="EnglishProgram#conversational-english"
+        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+      >
+        {t("conversational_english")}
+      </a>
+    </li>
+    <li>
+      <a
+        href="EnglishProgram#skill-based-classes"
+        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+      >
+        {t("skill_based_classes")}
+      </a>
+    </li>
+    <li>
+      <a
+        href="EnglishProgram#academic-english"
+        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+      >
+        {t("academic_english")}
+      </a>
+    </li>
+    <li>
+      <a
+        href="EnglishProgram#exam-preparation"
+        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+      >
+        {t("exam_preparation")}
+      </a>
+    </li>
+    <li>
+      <a
+        href="EnglishProgram#baccalaureat-program"
+        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+      >
+        {t("baccalaureat_program")}
+      </a>
+    </li>
+    <li>
+      <a
+        href="EnglishProgram#private-courses"
+        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+      >
+        {t("private_courses")}
+      </a>
+    </li>
+  </ul>
+</li>
+
           <li
             className="relative"
             onMouseEnter={() => handleMouseEnter("french")}
             onMouseLeave={handleMouseLeave}
           >
             <a
-              href="#"
+              href="FrenchProgram"
               className="flex items-center hover:text-sky-600 transition-all"
             >
               {t("french_program")}
@@ -235,7 +236,7 @@ const NavBar = () => {
             >
               <li>
                 <a
-                  href="#"
+                  href="FrenchProgram"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("general_french")}
@@ -243,7 +244,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="FrenchProgram"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("professional_french")}
@@ -251,7 +252,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="FrenchProgram"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("communication_french")}
@@ -259,7 +260,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="FrenchProgram"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("exam_preparation_french")}
@@ -267,7 +268,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="FrenchProgram"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("regional_french")}
@@ -275,7 +276,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="FrenchProgram"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("french_middle_school")}
@@ -289,7 +290,7 @@ const NavBar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <a
-              href="#"
+              href="Join"
               className="flex items-center hover:text-sky-600 transition-all"
             >
               {t("join")}
@@ -305,7 +306,7 @@ const NavBar = () => {
             >
               <li>
                 <a
-                  href="#"
+                  href="Join"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("local_teacher")}
@@ -313,7 +314,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="Join"
                   className="p-2 block hover:bg-gray-300 max-xl:text-black"
                 >
                   {t("native_teacher")}
@@ -322,13 +323,8 @@ const NavBar = () => {
             </ul>
           </li>
           <li>
-            <a href="#" className="hover:text-sky-600 transition-all">
+            <a href="Clubs" className="hover:text-sky-600 transition-all">
               {t("clubs")}
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-sky-600 transition-all">
-              {t("results")}
             </a>
           </li>
         </ul>
@@ -358,7 +354,7 @@ const NavBar = () => {
               .map((lang) => (
                 <li key={lang.code}>
                   <a
-                    href="#"
+                    href=""
                     onClick={() => handleLanguageChange(lang.code)}
                     className="p-2 flex items-center hover:bg-gray-300"
                   >

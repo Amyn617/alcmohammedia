@@ -15,7 +15,7 @@ const FAQs = () => {
       className="mx-auto max-w-7xl px-4 lg:p-10"
       aria-label="faq"
     >
-      <div className="text">
+      <div className="text-center">
         <p className="text-md text-red-500 mb-4 uppercase">FAQ</p>
         <h2 className="text-gray-500 text-3xl lg:text-5xl font-bold mb-6">
           {t("faq")}

@@ -5,24 +5,24 @@ const Partners = () => {
   const { t, language } = useContext(LanguageContext);
 
   const logos = [
-    { src: "./assets/images/ACA.svg", alt: "ACA", name: "ACA" },
+    { src: `${process.env.PUBLIC_URL}/assets/images/ACA.svg`, alt: "ACA", name: "ACA" },
     {
-      src: "./assets/images/CSC_Mohammedia.png",
+      src: `${process.env.PUBLIC_URL}/assets/images/CSC_Mohammedia.png`,
       alt: "CSC Mohammedia",
       name: "CSC Mohammedia",
     },
     {
-      src: "./assets/images/Brainlyne.png",
+      src: `${process.env.PUBLIC_URL}/assets/images/Brainlyne.png`,
       alt: "Brainlyne",
       name: "Brainlyne",
     },
     {
-      src: "./assets/images/US_Embassy_Morocco.png",
+      src: `${process.env.PUBLIC_URL}/assets/images/US_Embassy_Morocco.png`,
       alt: "US Embassy Morocco",
       name: "US Embassy Morocco",
     },
     {
-      src: "./assets/images/Association_Nahdat_Zenata.png",
+      src: `${process.env.PUBLIC_URL}/assets/images/Association_Nahdat_Zenata.png`,
       alt: "Association Nahdat Zenata",
       name: "Association Nahdat Zenata",
     },

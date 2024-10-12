@@ -10,15 +10,15 @@ const Footer = () => {
       className={`bg-no-repeat bg-cover bg-blue-950 text-gray-300 ${
         isArabic ? "text-right" : "text-left"
       }`}
-      style={{ backgroundImage: "url('./assets/images/footer-bg.png')" }}
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/footer-bg.png)` }}
       dir={isArabic ? "rtl" : "ltr"} // Set direction based on the selected language
     >
       <div className="px-24 py-12 grid gap-10 md:grid-cols-3 lg:grid-cols-4">
         {/* Footer Brand Section */}
         <div className="mb-8">
-          <a href="#" className="block mb-4">
+          <a href="/" className="block mb-4">
             <img
-              src="./assets/images/logo.svg"
+              src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
               alt={t("alcLogo")}
               className="brightness-0 invert"
             />
@@ -59,50 +59,50 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="Home"
               className="hover:text-red-500 transition-all duration-200"
             >
-              {t("about")}
+              {t("home")}
             </a>
           </li>
           <li>
             <a
-              href="#"
+              href="Registration"
               className="hover:text-red-500 transition-all duration-200"
             >
-              {t("courses")}
+              {t("registration")}
             </a>
           </li>
           <li>
             <a
-              href="#"
+              href="EnglishProgram"
               className="hover:text-red-500 transition-all duration-200"
             >
-              {t("events")}
+              {t("english_program")}
             </a>
           </li>
           <li>
             <a
-              href="#"
+              href="FrenchProgram"
               className="hover:text-red-500 transition-all duration-200"
             >
-              {t("clubs")}
+              {t("french_program")}
             </a>
           </li>
           <li>
             <a
-              href="#"
-              className="hover:text-red-500 transition-all duration-200"
-            >
-              {t("results")}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
+              href="Join"
               className="hover:text-red-500 transition-all duration-200"
             >
               {t("join")}
+            </a>
+          </li>
+          <li>
+            <a
+              href="Clubs"
+              className="hover:text-red-500 transition-all duration-200"
+            >
+              {t("clubs")}
             </a>
           </li>
         </ul>

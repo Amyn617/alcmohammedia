@@ -22,9 +22,9 @@ const HeroSection = () => {
     <section
       className="relative bg-cover bg-center py-20"
       style={{
-        backgroundImage: "url('./assets/images/alc.jpeg')",
-        backgroundAttachment: "fixed", // Optional: gives a more pronounced effect
-        backgroundPosition: `center ${scrollY * -0.1}px`, // Adjust the value for the desired effect
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/alc.jpeg)`,
+        backgroundAttachment: "fixed",
+        backgroundPosition: `center ${scrollY * -0.1}px`,
       }}
       id="home"
       aria-label="home"

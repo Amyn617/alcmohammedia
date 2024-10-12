@@ -24,7 +24,7 @@ const CategorySection = () => {
             <div className="p-8 lg:px-8 lg:py-16 text-center rounded-lg flex-grow bg-sky-50">
               <div className="bg-sky-100 w-20 h-20 mx-auto flex items-center justify-center rounded-full mb-6">
                 <img
-                  src="./assets/images/cat-1.svg"
+                  src={`${process.env.PUBLIC_URL}/assets/images/cat-1.svg`}
                   width="40"
                   height="40"
                   loading="lazy"
@@ -46,7 +46,7 @@ const CategorySection = () => {
             <div className="p-8 lg:px-8 lg:py-16 text-center rounded-lg flex-grow bg-red-50">
               <div className="bg-red-100 w-20 h-20 mx-auto flex items-center justify-center rounded-full mb-6">
                 <img
-                  src="./assets/images/cat-2.svg"
+                  src={`${process.env.PUBLIC_URL}/assets/images/cat-2.svg`}
                   width="40"
                   height="40"
                   loading="lazy"
@@ -70,7 +70,7 @@ const CategorySection = () => {
             <div className="p-8 lg:px-8 lg:py-16 text-center rounded-lg flex-grow bg-indigo-50">
               <div className="bg-indigo-100 w-20 h-20 mx-auto flex items-center justify-center rounded-full mb-6">
                 <img
-                  src="./assets/images/cat-3.svg"
+                  src={`${process.env.PUBLIC_URL}/assets/images/cat-3.svg`}
                   width="40"
                   height="40"
                   loading="lazy"
@@ -92,7 +92,7 @@ const CategorySection = () => {
             <div className="p-8 lg:px-8 lg:py-16 text-center rounded-lg flex-grow bg-green-50">
               <div className="bg-green-100 w-20 h-20 mx-auto flex items-center justify-center rounded-full mb-6">
                 <img
-                  src="./assets/images/cat-4.svg"
+                  src={`${process.env.PUBLIC_URL}/assets/images/cat-4.svg`}
                   width="40"
                   height="40"
                   loading="lazy"

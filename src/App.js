@@ -1,34 +1,30 @@
 import React from "react";
-import "./App.css"; // Import Tailwind CSS
+import "./App.css";
 import { LanguageProvider } from "./components/LanguageContext";
-import NavContact from "./components/NavContact.js";
-import NavBar from "./components/NavBar.js";
-import HeroSection from "./components/HeroSection.js";
-import CategorySection from "./components/CategorySection.js";
-import About from "./components/About.js";
-import Pedagogy from "./components/Pedagogy.js";
-import FAQs from "./components/FAQs.js";
-import Location from "./components/Location.js";
-import Partners from "./components/Partners.js";
-import Footer from "./components/Footer.js";
-import BackToTopButton from "./components/BackToTopButton.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import EnglishProgram from "./pages/EnglishProgram";
+import FrenchProgram from "./pages/FrenchProgram";
+import Join from "./pages/Join";
+import Registration from "./pages/Registration";
+import Clubs from "./pages/Clubs";
 
 const App = () => {
   return (
     <LanguageProvider>
-      <div id="top">
-        <NavContact />
-        <NavBar />
-        <HeroSection />
-        <CategorySection />
-        <About />
-        <Pedagogy />
-        <FAQs />
-        <Location />
-        <Partners/>
-        <Footer />
-        <BackToTopButton />
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/EnglishProgram" element={<EnglishProgram />} />
+          <Route path="/FrenchProgram" element={<FrenchProgram />} />
+          <Route path="/Join" element={<Join />} />
+          <Route path="/Registration" element={<Registration />} />
+          <Route path="/Clubs" element={<Clubs />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </Router>
     </LanguageProvider>
   );
 };
