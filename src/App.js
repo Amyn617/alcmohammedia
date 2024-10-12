@@ -1,6 +1,6 @@
 import React from "react";
 import { LanguageProvider } from "./components/LanguageContext";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import pages
 import Home from "./pages/Home";
