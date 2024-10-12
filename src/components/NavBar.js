@@ -61,7 +61,7 @@ const NavBar = () => {
         <a href="/"><img
           src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
           alt="ALC Mohammedia"
-          className="w-56"
+          className="w-56 py-6"
         /></a>
         {/* Overlay for sidebar */}
         <div
@@ -106,7 +106,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="Registration"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("new_students")}
                 </a>
@@ -114,7 +114,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="Registration"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("continuing_students")}
                 </a>
@@ -122,7 +122,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="Registration"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("returning_students")}
                 </a>
@@ -150,64 +150,64 @@ const NavBar = () => {
   >
     <li>
       <a
-        href="EnglishProgram#general-english"
-        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+        href="english-program#general-english"
+        className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("general_english")}
       </a>
     </li>
     <li>
       <a
-        href="EnglishProgram#business-english"
-        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+        href="english-program#business-english"
+        className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("business_english")}
       </a>
     </li>
     <li>
       <a
-        href="EnglishProgram#conversational-english"
-        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+        href="english-program#conversational-english"
+        className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("conversational_english")}
       </a>
     </li>
     <li>
       <a
-        href="EnglishProgram#skill-based-classes"
-        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+        href="english-program#skill-based-classes"
+        className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("skill_based_classes")}
       </a>
     </li>
     <li>
       <a
-        href="EnglishProgram#academic-english"
-        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+        href="english-program#academic-english"
+        className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("academic_english")}
       </a>
     </li>
     <li>
       <a
-        href="EnglishProgram#exam-preparation"
-        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+        href="english-program#exam-preparation"
+        className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("exam_preparation")}
       </a>
     </li>
     <li>
       <a
-        href="EnglishProgram#baccalaureat-program"
-        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+        href="english-program#baccalaureat-program"
+        className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("baccalaureat_program")}
       </a>
     </li>
     <li>
       <a
-        href="EnglishProgram#private-courses"
-        className="p-2 block hover:bg-gray-300 max-xl:text-black"
+        href="english-program#private-courses"
+        className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("private_courses")}
       </a>
@@ -237,7 +237,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="FrenchProgram"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("general_french")}
                 </a>
@@ -245,7 +245,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="FrenchProgram"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("professional_french")}
                 </a>
@@ -253,7 +253,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="FrenchProgram"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("communication_french")}
                 </a>
@@ -261,7 +261,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="FrenchProgram"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("exam_preparation_french")}
                 </a>
@@ -269,7 +269,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="FrenchProgram"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("regional_french")}
                 </a>
@@ -277,7 +277,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="FrenchProgram"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("french_middle_school")}
                 </a>
@@ -307,7 +307,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="Join"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("local_teacher")}
                 </a>
@@ -315,7 +315,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="Join"
-                  className="p-2 block hover:bg-gray-300 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("native_teacher")}
                 </a>
@@ -356,7 +356,7 @@ const NavBar = () => {
                   <a
                     href=""
                     onClick={() => handleLanguageChange(lang.code)}
-                    className="p-2 flex items-center hover:bg-gray-300"
+                    className="p-2 flex items-center hover:bg-sky-500"
                   >
                     <img
                       src={lang.flag}

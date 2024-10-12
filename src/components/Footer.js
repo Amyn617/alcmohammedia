@@ -10,11 +10,12 @@ const Footer = () => {
       className={`bg-no-repeat bg-cover bg-blue-950 text-gray-300 ${
         isArabic ? "text-right" : "text-left"
       }`}
-      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/footer-bg.png)` }}
-      dir={isArabic ? "rtl" : "ltr"} // Set direction based on the selected language
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/footer-bg.svg)`,
+      }}
+      dir={isArabic ? "rtl" : "ltr"}
     >
-      <div className="px-24 py-12 grid gap-10 md:grid-cols-3 lg:grid-cols-4">
-        {/* Footer Brand Section */}
+      <div className="px-10 py-12 md:px-24 md:py-16 lg:px-32 lg:py-24 grid gap-10 md:grid-cols-3 lg:grid-cols-4">
         <div className="mb-8">
           <a href="/" className="block mb-4">
             <img
@@ -30,14 +31,14 @@ const Footer = () => {
               href="https://maps.app.goo.gl/cyF9dEkNf9ypKHMM7"
               target="_blank"
               rel="noopener noreferrer"
-              className="block hover:text-red-500 transition-all duration-200"
+              className="block hover:text-red-500 transition duration-300"
             >
               33 Rue de Damas, Mohammedia
             </a>
             <a
               dir="ltr"
               href="tel:+212661545636"
-              className="block hover:text-red-500 transition-all duration-200"
+              className="block hover:text-red-500 transition duration-300"
             >
               +212 661-545636
             </a>
@@ -45,7 +46,7 @@ const Footer = () => {
               href="mailto:info@alcmohammedia.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="block hover:text-red-500 transition-all duration-200"
+              className="block hover:text-red-500 transition duration-300"
             >
               info@alcmohammedia.com
             </a>
@@ -60,7 +61,7 @@ const Footer = () => {
           <li>
             <a
               href="Home"
-              className="hover:text-red-500 transition-all duration-200"
+              className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("home")}
             </a>
@@ -68,7 +69,7 @@ const Footer = () => {
           <li>
             <a
               href="Registration"
-              className="hover:text-red-500 transition-all duration-200"
+              className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("registration")}
             </a>
@@ -76,7 +77,7 @@ const Footer = () => {
           <li>
             <a
               href="EnglishProgram"
-              className="hover:text-red-500 transition-all duration-200"
+              className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("english_program")}
             </a>
@@ -84,7 +85,7 @@ const Footer = () => {
           <li>
             <a
               href="FrenchProgram"
-              className="hover:text-red-500 transition-all duration-200"
+              className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("french_program")}
             </a>
@@ -92,7 +93,7 @@ const Footer = () => {
           <li>
             <a
               href="Join"
-              className="hover:text-red-500 transition-all duration-200"
+              className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("join")}
             </a>
@@ -100,7 +101,7 @@ const Footer = () => {
           <li>
             <a
               href="Clubs"
-              className="hover:text-red-500 transition-all duration-200"
+              className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("clubs")}
             </a>
@@ -115,7 +116,7 @@ const Footer = () => {
               href="https://aca.org.ma/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-red-500 transition-all duration-200"
+              className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("aca")}
             </a>
@@ -125,7 +126,7 @@ const Footer = () => {
               href="https://aca.org.ma/contact-3/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-red-500 transition-all duration-200"
+              className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("allAlcs")}
             </a>
@@ -137,12 +138,13 @@ const Footer = () => {
           <p className="text-white text-xl font-semibold">{t("contacts")}</p>
           <br />
           <ul dir="ltr" className="flex space-x-4">
+            {/** Social Media Icons with hover effects */}
             <li>
               <a
                 href="mailto:info@alcmohammedia.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-red-500 transition-all duration-200"
+                className="hover:text-red-500 transition duration-300"
               >
                 <i className="fa-solid fa-envelope text-2xl"></i>
               </a>
@@ -152,7 +154,7 @@ const Footer = () => {
                 href="tel:+212661545636"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-red-500 transition-all duration-200"
+                className="hover:text-red-500 transition duration-300"
               >
                 <i className="fa-solid fa-phone text-2xl"></i>
               </a>
@@ -162,7 +164,7 @@ const Footer = () => {
                 href="https://www.facebook.com/ALC.Mohammedia/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-red-500 transition-all duration-200"
+                className="hover:text-red-500 transition duration-300"
               >
                 <i className="fa-brands fa-facebook text-2xl"></i>
               </a>
@@ -172,7 +174,7 @@ const Footer = () => {
                 href="https://www.instagram.com/alcmohammedia/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-red-500 transition-all duration-200"
+                className="hover:text-red-500 transition duration-300"
               >
                 <i className="fa-brands fa-instagram text-2xl"></i>
               </a>
@@ -182,7 +184,7 @@ const Footer = () => {
                 href="https://maps.app.goo.gl/cyF9dEkNf9ypKHMM7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-red-500 transition-all duration-200"
+                className="hover:text-red-500 transition duration-300"
               >
                 <i className="fa-solid fa-location-dot text-2xl"></i>
               </a>
@@ -198,7 +200,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} {t("allRightsReserved")}{" "}
             <a
               href="#"
-              className="text-sky-400 hover:text-red-500 transition-all duration-200"
+              className="text-sky-400 hover:text-red-500 transition duration-300"
             >
               {t("alcMohammedia")}
             </a>

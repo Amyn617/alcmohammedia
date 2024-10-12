@@ -1,18 +1,21 @@
-import NavContact from "../components/NavContact.js";
-import NavBar from "../components/NavBar.js";
-import Footer from "../components/Footer.js";
-import BackToTopButton from "../components/BackToTopButton.js";
-import EnglishPrograms from "../components/EnglishPrograms.js";
+import React from "react";
+import NavContact from "../components/NavContact";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import BackToTopButton from "../components/BackToTopButton";
+import EnglishPrograms from "../components/EnglishPrograms";
 
 const EnglishProgram = () => {
   return (
-    <div id="top">
-        <NavContact />
-        <NavBar />
-        <EnglishPrograms/>
-        <Footer />
-        <BackToTopButton />
-      </div>
+    <div id="top" className="flex flex-col min-h-screen">
+      <NavContact />
+      <NavBar />
+      <main className="flex-grow">
+        <EnglishPrograms />
+      </main>
+      <Footer />
+      <BackToTopButton />
+    </div>
   );
 };
 
