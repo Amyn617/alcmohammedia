@@ -17,15 +17,14 @@ const App = () => {
     <LanguageProvider>
       <Router>
         <Routes>
-          {/* Ensure paths are correctly defined */}
-          <Route path="/" element={<Home />} />  {/* Default Home route */}
-          <Route path="/home" element={<Home />} />  {/* Optional: You can keep or remove this */}
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/english-program" element={<EnglishProgram />} />
           <Route path="/french-program" element={<FrenchProgram />} />
           <Route path="/join" element={<Join />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/clubs" element={<Clubs />} />
-          <Route path="*" element={<NotFound />} /> {/* Catch-all for unmatched routes */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </LanguageProvider>

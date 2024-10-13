@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
-import { LanguageContext } from "./LanguageContext.js";
+import { LanguageContext } from "./LanguageContext";
 import { FaChevronDown, FaBars } from "react-icons/fa";
 
 const NavBar = () => {
@@ -58,7 +58,7 @@ const NavBar = () => {
   return (
     <div className="sticky z-50 top-0">
       <div className="flex items-center justify-between px-10 xl:px-20 bg-white shadow-md">
-        <a href="/"><img
+        <a href="/#"><img
           src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
           alt="ALC Mohammedia"
           className="w-56 py-6"
@@ -80,7 +80,7 @@ const NavBar = () => {
           }`}
         >
           <li>
-            <a href="Home" className=" hover:text-sky-600 transition-all">
+            <a href="#home" className=" hover:text-sky-600 transition-all">
               {t("home")}
             </a>
           </li>
@@ -90,7 +90,7 @@ const NavBar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <a
-              href="Registration"
+              href="#registration"
               className="flex items-center hover:text-sky-600 transition-all"
             >
               {t("registration")}
@@ -105,7 +105,7 @@ const NavBar = () => {
             >
               <li>
                 <a
-                  href="Registration"
+                  href="#registration"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("new_students")}
@@ -113,7 +113,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="Registration"
+                  href="#registration"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("continuing_students")}
@@ -121,7 +121,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="Registration"
+                  href="#registration"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("returning_students")}
@@ -135,7 +135,7 @@ const NavBar = () => {
   onMouseLeave={handleMouseLeave}
 >
   <div
-    href=""
+    href="#"
     className="flex items-center hover:text-sky-600 transition-all cursor-pointer"
   >
     {t("english_program")}
@@ -221,7 +221,7 @@ const NavBar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <a
-              href="FrenchProgram"
+              href="#french-program"
               className="flex items-center hover:text-sky-600 transition-all"
             >
               {t("french_program")}
@@ -236,7 +236,7 @@ const NavBar = () => {
             >
               <li>
                 <a
-                  href="FrenchProgram"
+                  href="#french-program"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("general_french")}
@@ -244,7 +244,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="FrenchProgram"
+                  href="#french-program"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("professional_french")}
@@ -252,7 +252,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="FrenchProgram"
+                  href="#french-program"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("communication_french")}
@@ -260,7 +260,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="FrenchProgram"
+                  href="#french-program"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("exam_preparation_french")}
@@ -268,7 +268,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="FrenchProgram"
+                  href="#french-program"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("regional_french")}
@@ -276,7 +276,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="FrenchProgram"
+                  href="#french-program"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("french_middle_school")}
@@ -290,7 +290,7 @@ const NavBar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <a
-              href="join"
+              href="#join"
               className="flex items-center hover:text-sky-600 transition-all"
             >
               {t("join")}
@@ -306,7 +306,7 @@ const NavBar = () => {
             >
               <li>
                 <a
-                  href="join"
+                  href="#join"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("local_teacher")}
@@ -314,7 +314,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="join"
+                  href="#join"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("native_teacher")}
@@ -323,7 +323,7 @@ const NavBar = () => {
             </ul>
           </li>
           <li>
-            <a href="Clubs" className="hover:text-sky-600 transition-all">
+            <a href="#clubs" className="hover:text-sky-600 transition-all">
               {t("clubs")}
             </a>
           </li>
@@ -354,7 +354,7 @@ const NavBar = () => {
               .map((lang) => (
                 <li key={lang.code}>
                   <a
-                    href=""
+                    href="#"
                     onClick={() => handleLanguageChange(lang.code)}
                     className="p-2 flex items-center hover:bg-sky-500"
                   >

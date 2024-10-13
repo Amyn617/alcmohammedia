@@ -1,7 +1,7 @@
-import NavContact from "../components/NavContact.js";
-import NavBar from "../components/NavBar.js";
-import Footer from "../components/Footer.js";
-import BackToTopButton from "../components/BackToTopButton.js";
+import NavContact from "../components/NavContact";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import BackToTopButton from "../components/BackToTopButton";
 
 const Clubs = () => {
   return (
