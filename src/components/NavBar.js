@@ -150,7 +150,7 @@ const NavBar = () => {
   >
     <li>
       <a
-        href="english-program#general-english"
+        href="#english-program#general-english"
         className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("general_english")}
@@ -158,7 +158,7 @@ const NavBar = () => {
     </li>
     <li>
       <a
-        href="english-program#business-english"
+        href="#english-program#business-english"
         className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("business_english")}
@@ -166,7 +166,7 @@ const NavBar = () => {
     </li>
     <li>
       <a
-        href="english-program#conversational-english"
+        href="#english-program#conversational-english"
         className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("conversational_english")}
@@ -174,7 +174,7 @@ const NavBar = () => {
     </li>
     <li>
       <a
-        href="english-program#skill-based-classes"
+        href="#english-program#skill-based-classes"
         className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("skill_based_classes")}
@@ -182,7 +182,7 @@ const NavBar = () => {
     </li>
     <li>
       <a
-        href="english-program#academic-english"
+        href="#english-program#academic-english"
         className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("academic_english")}
@@ -190,7 +190,7 @@ const NavBar = () => {
     </li>
     <li>
       <a
-        href="english-program#exam-preparation"
+        href="#english-program#exam-preparation"
         className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("exam_preparation")}
@@ -198,7 +198,7 @@ const NavBar = () => {
     </li>
     <li>
       <a
-        href="english-program#baccalaureat-program"
+        href="#english-program#baccalaureat-program"
         className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("baccalaureat_program")}
@@ -206,7 +206,7 @@ const NavBar = () => {
     </li>
     <li>
       <a
-        href="english-program#private-courses"
+        href="#english-program#private-courses"
         className="p-2 block hover:bg-sky-500 max-xl:text-black"
       >
         {t("private_courses")}
@@ -290,7 +290,7 @@ const NavBar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <a
-              href="Join"
+              href="join"
               className="flex items-center hover:text-sky-600 transition-all"
             >
               {t("join")}
@@ -306,7 +306,7 @@ const NavBar = () => {
             >
               <li>
                 <a
-                  href="Join"
+                  href="join"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("local_teacher")}
@@ -314,7 +314,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="Join"
+                  href="join"
                   className="p-2 block hover:bg-sky-500 max-xl:text-black"
                 >
                   {t("native_teacher")}
