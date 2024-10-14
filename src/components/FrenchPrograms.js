@@ -1,8 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const FrenchPrograms = () => {
   const location = useLocation();
+
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const scrollToElement = () => {
@@ -43,13 +56,14 @@ const FrenchPrograms = () => {
           Explore a World of French Language Excellence
         </p>
       </div>
-      
+
       <section id="general-french">
         <div
           className="relative bg-cover bg-center py-24 md:py-32 my-16 shadow-lg"
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_1.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="General French"
         >
@@ -59,11 +73,12 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          Our General French program is designed for learners of all levels, 
-          focusing on developing foundational skills in reading, writing, 
-          speaking, and listening. Classes emphasize interactive learning and 
-          practical usage of the language, making it ideal for students looking 
-          to enhance their everyday communication skills and cultural understanding.
+          Our General French program is designed for learners of all levels,
+          focusing on developing foundational skills in reading, writing,
+          speaking, and listening. Classes emphasize interactive learning and
+          practical usage of the language, making it ideal for students looking
+          to enhance their everyday communication skills and cultural
+          understanding.
         </p>
       </section>
 
@@ -73,6 +88,7 @@ const FrenchPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_2.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Professional French"
         >
@@ -82,21 +98,22 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          The Professional French program caters to individuals aiming to improve 
-          their language skills for the workplace. This course covers business 
-          vocabulary, formal communication, and essential skills for various 
-          professional contexts. Participants will engage in role-playing, 
-          case studies, and industry-specific terminology to build confidence 
-          in their professional interactions.
+          The Professional French program caters to individuals aiming to
+          improve their language skills for the workplace. This course covers
+          business vocabulary, formal communication, and essential skills for
+          various professional contexts. Participants will engage in
+          role-playing, case studies, and industry-specific terminology to build
+          confidence in their professional interactions.
         </p>
       </section>
 
-      <section id="communication">
+      <section id="communication-french">
         <div
           className="relative bg-cover bg-center py-24 md:py-32 my-16 shadow-lg"
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_3.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Communication: Oral/Written"
         >
@@ -106,21 +123,22 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          Our Communication program focuses on enhancing both oral and written 
-          French proficiency. Through dynamic exercises and discussions, students 
-          will improve their fluency and comprehension, honing their ability to 
-          express ideas clearly and effectively. This program is suitable for 
-          anyone looking to elevate their communication skills in a French-speaking 
-          environment.
+          Our Communication program focuses on enhancing both oral and written
+          French proficiency. Through dynamic exercises and discussions,
+          students will improve their fluency and comprehension, honing their
+          ability to express ideas clearly and effectively. This program is
+          suitable for anyone looking to elevate their communication skills in a
+          French-speaking environment.
         </p>
       </section>
 
-      <section id="exam-preparation">
+      <section id="exam-preparation-french">
         <div
           className="relative bg-cover bg-center py-24 md:py-32 my-16 shadow-lg"
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_4.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Exam Preparation (DELF B1 - B2, DALF, and TCF)"
         >
@@ -130,12 +148,12 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          Our Exam Preparation program is tailored for students aiming to take 
-          the DELF B1, DELF B2, DALF, or TCF exams. This course provides comprehensive 
-          review materials, practice tests, and strategies for success. 
-          Instructors will guide students through the exam format, helping them 
-          to build the necessary skills and confidence to achieve their desired 
-          scores.
+          Our Exam Preparation program is tailored for students aiming to take
+          the DELF B1, DELF B2, DALF, or TCF exams. This course provides
+          comprehensive review materials, practice tests, and strategies for
+          success. Instructors will guide students through the exam format,
+          helping them to build the necessary skills and confidence to achieve
+          their desired scores.
         </p>
       </section>
 
@@ -145,6 +163,7 @@ const FrenchPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_5.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Regional French (6th Year High School)"
         >
@@ -154,10 +173,10 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          The Regional French program is specifically designed for 6th-year 
-          high school students. This course focuses on cultural aspects of the 
-          Francophone world while reinforcing grammar and vocabulary. Students 
-          will explore regional dialects, traditions, and literature, enriching 
+          The Regional French program is specifically designed for 6th-year high
+          school students. This course focuses on cultural aspects of the
+          Francophone world while reinforcing grammar and vocabulary. Students
+          will explore regional dialects, traditions, and literature, enriching
           their understanding of the diverse French-speaking communities.
         </p>
       </section>
@@ -168,6 +187,7 @@ const FrenchPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_5.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="French (9th Year Middle School)"
         >
@@ -177,12 +197,12 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          Our 9th Year Middle School French program offers a comprehensive 
-          introduction to the language for younger learners. The curriculum 
-          includes interactive activities, games, and projects to engage students 
-          and foster a love for the French language. Emphasis is placed on 
-          foundational skills, preparing students for future language studies and 
-          cultural exploration.
+          Our 9th Year Middle School French program offers a comprehensive
+          introduction to the language for younger learners. The curriculum
+          includes interactive activities, games, and projects to engage
+          students and foster a love for the French language. Emphasis is placed
+          on foundational skills, preparing students for future language studies
+          and cultural exploration.
         </p>
       </section>
     </div>

@@ -4,6 +4,19 @@ import { useLocation } from "react-router-dom";
 const EnglishPrograms = () => {
   const location = useLocation();
 
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     const scrollToElement = () => {
       if (location.hash) {
@@ -48,6 +61,7 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_1.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="General English"
         >
@@ -78,6 +92,7 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_2.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Business English"
         >
@@ -108,6 +123,7 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_3.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Conversational English"
         >
@@ -135,6 +151,7 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_4.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Skill-Based Classes"
         >
@@ -160,6 +177,7 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_5.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Academic English & Research Methodology"
         >
@@ -262,6 +280,7 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_6.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Exam Preparation"
         >
@@ -293,6 +312,7 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_7.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Baccalaureat Program"
         >
@@ -325,6 +345,7 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_8.jpg)`,
             backgroundAttachment: "fixed",
+            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Private Courses"
         >

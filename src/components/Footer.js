@@ -17,7 +17,7 @@ const Footer = () => {
     >
       <div className="px-10 py-12 md:px-24 md:py-16 lg:px-32 lg:py-24 grid gap-10 md:grid-cols-3 lg:grid-cols-4">
         <div className="mb-8">
-          <a href="/" className="block mb-4">
+          <a href="#home" className="block mb-4">
             <img
               src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
               alt={t("alcLogo")}
@@ -60,7 +60,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="Home"
+              href="#home"
               className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("home")}
@@ -68,7 +68,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="Registration"
+              href="#registration"
               className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("registration")}
@@ -76,7 +76,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="EnglishProgram"
+              href="#english-program"
               className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("english_program")}
@@ -84,7 +84,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="FrenchProgram"
+              href="#french-program"
               className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("french_program")}
@@ -92,7 +92,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="Join"
+              href="#join"
               className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("join")}
@@ -100,7 +100,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="Clubs"
+              href="#clubs"
               className="hover:text-red-500 transition duration-300 text-gray-300"
             >
               {t("clubs")}
@@ -199,7 +199,7 @@ const Footer = () => {
           <p className="text-gray-500">
             &copy; {new Date().getFullYear()} {t("allRightsReserved")}{" "}
             <a
-              href="#"
+              href="#home"
               className="text-sky-400 hover:text-red-500 transition duration-300"
             >
               {t("alcMohammedia")}

@@ -15,9 +15,8 @@ const Registration = () => {
         );
         const csvData = await response.text();
 
-        // Convert CSV text to array
         const rows = csvData.split("\n").map((row) => row.split(","));
-        setData(rows.slice(1)); // Store the data, excluding header row
+        setData(rows.slice(1));
       } catch (error) {
         console.error("Error fetching the spreadsheet data:", error);
       }
@@ -108,21 +107,20 @@ const Registration = () => {
           <div className="bg-white p-6 rounded-lg shadow-md mb-6">
             <h3 className="text-2xl font-semibold mb-2">Schedule</h3>
             <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-sky-600 text-white">
+            <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-sky-600 text-white">
                   <tr>
                     <th className="px-4 py-2 text-left">Day</th>
                     <th className="px-4 py-2 text-left">Session 1</th>
                     <th className="px-4 py-2 text-left">Session 2</th>
                     <th className="px-4 py-2 text-left">Session 3</th>
-                    {/* Add more session columns as needed */}
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {data.map((row, index) => (
                     <tr
                       key={index}
-                      className={`${
+                      className={`hover:bg-gray-100 ${
                         index % 2 === 0 ? "bg-gray-50" : "bg-white"
                       }`}
                     >
@@ -130,12 +128,14 @@ const Registration = () => {
                       <td className="px-4 py-2">{row[1] || "-"}</td>
                       <td className="px-4 py-2">{row[2] || "-"}</td>
                       <td className="px-4 py-2">{row[3] || "-"}</td>
-                      {/* Add more cells for additional sessions as needed */}
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
+
+            <hr />
+            <br />
             <p className="mt-2">
               *Adult schedule, twice a week, 1.5 hours each session.
             </p>

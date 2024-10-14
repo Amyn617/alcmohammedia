@@ -58,11 +58,13 @@ const NavBar = () => {
   return (
     <div className="sticky z-50 top-0">
       <div className="flex items-center justify-between px-10 xl:px-20 bg-white shadow-md">
-        <a href="/#"><img
-          src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
-          alt="ALC Mohammedia"
-          className="w-56 py-6"
-        /></a>
+        <a href="/#home">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+            alt="ALC Mohammedia"
+            className="w-56 py-6"
+          />
+        </a>
         {/* Overlay for sidebar */}
         <div
           className={`fixed inset-0 bg-black z-40 transition-opacity duration-500 ${
@@ -94,139 +96,100 @@ const NavBar = () => {
               className="flex items-center hover:text-sky-600 transition-all"
             >
               {t("registration")}
-              <FaChevronDown className="ml-2 text-sm" />
             </a>
+          </li>
+          <li
+            className="relative"
+            onMouseEnter={() => handleMouseEnter("english")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="flex items-center hover:text-sky-600 transition-all cursor-pointer">
+              {t("english_program")}
+              <FaChevronDown className="ml-2 text-sm" />
+            </div>
             <ul
               className={`${
-                activeDropdown === "registration"
+                activeDropdown === "english"
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible translate-y-2"
               } absolute top-full left-0 mt-2 bg-white backdrop-blur-md border border-gray-200 min-w-[220px] transition-all duration-300 ease-in-out z-50`}
             >
               <li>
                 <a
-                  href="#registration"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  href="#english-program#general-english"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
-                  {t("new_students")}
+                  {t("general_english")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#registration"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  href="#english-program#business-english"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
-                  {t("continuing_students")}
+                  {t("business_english")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#registration"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  href="#english-program#conversational-english"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
-                  {t("returning_students")}
+                  {t("conversational_english")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#english-program#skill-based-classes"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
+                >
+                  {t("skill_based_classes")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#english-program#academic-english"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
+                >
+                  {t("academic_english")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#english-program#exam-preparation"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
+                >
+                  {t("exam_preparation")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#english-program#baccalaureat-program"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
+                >
+                  {t("baccalaureat_program")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#english-program#private-courses"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
+                >
+                  {t("private_courses")}
                 </a>
               </li>
             </ul>
           </li>
-          <li
-  className="relative"
-  onMouseEnter={() => handleMouseEnter("english")}
-  onMouseLeave={handleMouseLeave}
->
-  <div
-    href="#"
-    className="flex items-center hover:text-sky-600 transition-all cursor-pointer"
-  >
-    {t("english_program")}
-    <FaChevronDown className="ml-2 text-sm" />
-  </div>
-  <ul
-    className={`${
-      activeDropdown === "english"
-        ? "opacity-100 visible translate-y-0"
-        : "opacity-0 invisible translate-y-2"
-    } absolute top-full left-0 mt-2 bg-white backdrop-blur-md border border-gray-200 min-w-[220px] transition-all duration-300 ease-in-out z-50`}
-  >
-    <li>
-      <a
-        href="#english-program#general-english"
-        className="p-2 block hover:bg-sky-500 max-xl:text-black"
-      >
-        {t("general_english")}
-      </a>
-    </li>
-    <li>
-      <a
-        href="#english-program#business-english"
-        className="p-2 block hover:bg-sky-500 max-xl:text-black"
-      >
-        {t("business_english")}
-      </a>
-    </li>
-    <li>
-      <a
-        href="#english-program#conversational-english"
-        className="p-2 block hover:bg-sky-500 max-xl:text-black"
-      >
-        {t("conversational_english")}
-      </a>
-    </li>
-    <li>
-      <a
-        href="#english-program#skill-based-classes"
-        className="p-2 block hover:bg-sky-500 max-xl:text-black"
-      >
-        {t("skill_based_classes")}
-      </a>
-    </li>
-    <li>
-      <a
-        href="#english-program#academic-english"
-        className="p-2 block hover:bg-sky-500 max-xl:text-black"
-      >
-        {t("academic_english")}
-      </a>
-    </li>
-    <li>
-      <a
-        href="#english-program#exam-preparation"
-        className="p-2 block hover:bg-sky-500 max-xl:text-black"
-      >
-        {t("exam_preparation")}
-      </a>
-    </li>
-    <li>
-      <a
-        href="#english-program#baccalaureat-program"
-        className="p-2 block hover:bg-sky-500 max-xl:text-black"
-      >
-        {t("baccalaureat_program")}
-      </a>
-    </li>
-    <li>
-      <a
-        href="#english-program#private-courses"
-        className="p-2 block hover:bg-sky-500 max-xl:text-black"
-      >
-        {t("private_courses")}
-      </a>
-    </li>
-  </ul>
-</li>
 
           <li
             className="relative"
             onMouseEnter={() => handleMouseEnter("french")}
             onMouseLeave={handleMouseLeave}
           >
-            <a
-              href="#french-program"
-              className="flex items-center hover:text-sky-600 transition-all"
-            >
+            <div className="flex items-center hover:text-sky-600 transition-all">
               {t("french_program")}
               <FaChevronDown className="ml-2 text-sm" />
-            </a>
+            </div>
             <ul
               className={`${
                 activeDropdown === "french"
@@ -236,48 +199,48 @@ const NavBar = () => {
             >
               <li>
                 <a
-                  href="#french-program"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  href="#french-program#general-french"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
                   {t("general_french")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#french-program"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  href="#french-program#professional-french"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
                   {t("professional_french")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#french-program"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  href="#french-program#communication-french"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
                   {t("communication_french")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#french-program"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  href="#french-program#exam-preparation-french"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
                   {t("exam_preparation_french")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#french-program"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  href="#french-program#regional-french"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
                   {t("regional_french")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#french-program"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  href="#french-program#french-middle-school"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
                   {t("french_middle_school")}
                 </a>
@@ -307,7 +270,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#join"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
                   {t("local_teacher")}
                 </a>
@@ -315,7 +278,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#join"
-                  className="p-2 block hover:bg-sky-500 max-xl:text-black"
+                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
                 >
                   {t("native_teacher")}
                 </a>
@@ -356,7 +319,7 @@ const NavBar = () => {
                   <a
                     href="#"
                     onClick={() => handleLanguageChange(lang.code)}
-                    className="p-2 flex items-center hover:bg-sky-500"
+                    className="p-2 flex items-center hover:bg-sky-300"
                   >
                     <img
                       src={lang.flag}
