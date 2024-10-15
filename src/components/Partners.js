@@ -29,7 +29,7 @@ const Partners = () => {
   ];
 
   return (
-    <section dir={`${language === "ar" ? "rtl" : "ltr"}`} className="py-10 lg:py-20 mx-auto max-w-7xl px-4 lg:px-8">
+    <section dir={`${language === "ar" ? "rtl" : "ltr"}`} className="py-10 lg:py-20 mx-auto">
       <div className="text-center mb-6">
         <p className="text-md text-red-500 uppercase tracking-wide">
           {t("networkSubtitle")}
@@ -45,7 +45,7 @@ const Partners = () => {
         {t("partnersDescription2")} <br />
         {t("partnersDescription3")}
       </p>
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-4">
           {logos.map((logo, index) => (
             <div key={index} className="flex items-center justify-center">
               <img

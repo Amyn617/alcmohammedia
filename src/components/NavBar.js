@@ -65,7 +65,6 @@ const NavBar = () => {
             className="w-56 py-6"
           />
         </a>
-        {/* Overlay for sidebar */}
         <div
           className={`fixed inset-0 bg-black z-40 transition-opacity duration-500 ${
             sidebarActive ? "opacity-50 visible" : "opacity-0 invisible"
@@ -82,7 +81,7 @@ const NavBar = () => {
           }`}
         >
           <li>
-            <a href="#home" className=" hover:text-sky-600 transition-all">
+            <a href="#home" className=" hover:text-sky-600 transition-all navbar-link">
               {t("home")}
             </a>
           </li>
@@ -93,17 +92,17 @@ const NavBar = () => {
           >
             <a
               href="#registration"
-              className="flex items-center hover:text-sky-600 transition-all"
+              className="flex items-center hover:text-sky-600 transition-all navbar-link"
             >
               {t("registration")}
             </a>
           </li>
           <li
-            className="relative"
+            className="relative cursor-pointer"
             onMouseEnter={() => handleMouseEnter("english")}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="flex items-center hover:text-sky-600 transition-all cursor-pointer">
+            <div className="flex items-center hover:text-sky-600 transition-all navbar-link">
               {t("english_program")}
               <FaChevronDown className="ml-2 text-sm" />
             </div>
@@ -182,11 +181,11 @@ const NavBar = () => {
           </li>
 
           <li
-            className="relative"
+            className="relative cursor-pointer"
             onMouseEnter={() => handleMouseEnter("french")}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="flex items-center hover:text-sky-600 transition-all">
+            <div className="flex items-center hover:text-sky-600 transition-all navbar-link">
               {t("french_program")}
               <FaChevronDown className="ml-2 text-sm" />
             </div>
@@ -254,39 +253,13 @@ const NavBar = () => {
           >
             <a
               href="#join"
-              className="flex items-center hover:text-sky-600 transition-all"
+              className="flex items-center hover:text-sky-600 transition-all navbar-link"
             >
               {t("join")}
-
-              <FaChevronDown className="ml-2 text-sm" />
             </a>
-            <ul
-              className={`${
-                activeDropdown === "join"
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible translate-y-2"
-              } absolute top-full left-0 mt-2 bg-white backdrop-blur-md border border-gray-200 min-w-[220px] transition-all duration-300 ease-in-out z-50`}
-            >
-              <li>
-                <a
-                  href="#join"
-                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
-                >
-                  {t("local_teacher")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#join"
-                  className="p-2 block hover:bg-sky-300 max-xl:text-black"
-                >
-                  {t("native_teacher")}
-                </a>
-              </li>
-            </ul>
           </li>
           <li>
-            <a href="#clubs" className="hover:text-sky-600 transition-all">
+            <a href="#clubs" className="hover:text-sky-600 transition-all navbar-link">
               {t("clubs")}
             </a>
           </li>
@@ -317,9 +290,8 @@ const NavBar = () => {
               .map((lang) => (
                 <li key={lang.code}>
                   <a
-                    href="#"
                     onClick={() => handleLanguageChange(lang.code)}
-                    className="p-2 flex items-center hover:bg-sky-300"
+                    className="p-2 flex items-center hover:bg-sky-300 cursor-pointer"
                   >
                     <img
                       src={lang.flag}

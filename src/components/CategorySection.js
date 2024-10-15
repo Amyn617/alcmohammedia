@@ -33,7 +33,7 @@ const CategorySection = () => {
               </div>
 
               <h3 className="text-xl font-semibold mb-5">
-                <div className="text-sky-600">{t("qualityEnglishCourses")}</div>
+                <div className="text-sky-500">{t("qualityEnglishCourses")}</div>
               </h3>
 
               <p className="text-gray-600">

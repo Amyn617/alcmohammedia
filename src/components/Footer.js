@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`bg-no-repeat bg-cover bg-blue-950 text-gray-300 ${
+      className={`bg-no-repeat bg-cover bg-blue-900 text-gray-300 ${
         isArabic ? "text-right" : "text-left"
       }`}
       style={{
@@ -43,12 +43,12 @@ const Footer = () => {
               +212 661-545636
             </a>
             <a
-              href="mailto:info@alcmohammedia.com"
+              href="mailto:admin@alcmohammedia.com"
               target="_blank"
               rel="noopener noreferrer"
               className="block hover:text-red-500 transition duration-300"
             >
-              info@alcmohammedia.com
+              admin@alcmohammedia.com
             </a>
           </div>
         </div>
@@ -141,7 +141,7 @@ const Footer = () => {
             {/** Social Media Icons with hover effects */}
             <li>
               <a
-                href="mailto:info@alcmohammedia.com"
+                href="mailto:admin@alcmohammedia.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-red-500 transition duration-300"

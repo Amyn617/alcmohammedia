@@ -7,10 +7,6 @@ body {
 }
 
 
-.navbar-item {
-  cursor: pointer;
-}
-
 .navbar-link::before {
   content: "";
   position: absolute;

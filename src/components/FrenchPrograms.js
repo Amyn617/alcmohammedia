@@ -49,7 +49,7 @@ const FrenchPrograms = () => {
   return (
     <div className="bg-gray-100 py-12">
       <div className="text-center mb-8">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-600">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-500">
           French Programs
         </h1>
         <p className="text-base md:text-lg text-gray-700 mt-2">
@@ -185,7 +185,7 @@ const FrenchPrograms = () => {
         <div
           className="relative bg-cover bg-center py-24 md:py-32 my-16 shadow-lg"
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_5.jpg)`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_6.jpg)`,
             backgroundAttachment: "fixed",
             backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
