@@ -58,11 +58,11 @@ const NavBar = () => {
   return (
     <div className="sticky z-50 top-0">
       <div className="flex items-center justify-between px-10 xl:px-20 bg-white shadow-md">
-        <a href="/#home">
+        <a href="#home">
           <img
             src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
             alt="ALC Mohammedia"
-            className="w-56 py-6"
+            className="w-56 lg:w-48 py-6"
           />
         </a>
         <div
@@ -74,14 +74,17 @@ const NavBar = () => {
         <ul
           dir={`${language === "ar" ? "rtl" : "ltr"}`}
           ref={sidebarRef}
-          className={`hidden max-xl:flex max-xl:gap-8 max-xl:flex-col max-xl:z-50 max-xl:text-white max-xl:bg-blue-950 max-xl:absolute max-xl:top-0 max-xl:px-12 max-xl:py-20 max-xl:h-[100vh] max-xl:transition-all max-xl:duration-500 max-xl:ease-in-out xl:flex gap-10 ${
+          className={`hidden gap-10 max-lg:flex max-xl:gap-6 max-lg:flex-col max-lg:z-50 max-lg:text-white max-lg:bg-blue-900 max-lg:absolute max-lg:top-0 max-lg:px-12 max-lg:py-20 max-lg:h-[100vh] max-lg:transition-all max-lg:duration-500 max-lg:ease-in-out lg:flex ${
             sidebarActive
-              ? "max-xl:translate-x-0 max-xl:left-0 opacity-100"
-              : "max-xl:-translate-x-full max-xl:left-0 max-xl:opacity-0"
+              ? "max-lg:translate-x-0 max-lg:left-0 opacity-100"
+              : "max-lg:-translate-x-full max-lg:left-0 max-lg:opacity-0"
           }`}
         >
           <li>
-            <a href="#home" className=" hover:text-sky-600 transition-all navbar-link">
+            <a
+              href="#home"
+              className=" hover:text-sky-600 transition-all navbar-link"
+            >
               {t("home")}
             </a>
           </li>
@@ -259,7 +262,10 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a href="#clubs" className="hover:text-sky-600 transition-all navbar-link">
+            <a
+              href="#clubs"
+              className="hover:text-sky-600 transition-all navbar-link"
+            >
               {t("clubs")}
             </a>
           </li>
@@ -307,7 +313,7 @@ const NavBar = () => {
         </div>
 
         <button
-          className="xl:hidden text-2xl"
+          className="lg:hidden text-2xl"
           onClick={() => setSidebarActive((prev) => !prev)}
         >
           <FaBars />

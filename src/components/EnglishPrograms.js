@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-
 import { LanguageContext } from "./LanguageContext";
 
 const EnglishPrograms = () => {
@@ -65,7 +64,6 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_1.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.2}px`,
           }}
           aria-label={t("general_english")}
         >
@@ -85,7 +83,6 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_2.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.2}px`,
           }}
           aria-label={t("business_english")}
         >
@@ -105,7 +102,6 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_3.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.2}px`,
           }}
           aria-label={t("conversational_english")}
         >
@@ -125,7 +121,6 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_4.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.2}px`,
           }}
           aria-label={t("skill_based_classes")}
         >
@@ -145,7 +140,6 @@ const EnglishPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_5.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.11}px`,
           }}
           aria-label={t("academic_english")}
         >
@@ -203,13 +197,68 @@ const EnglishPrograms = () => {
         <div className="mt-16 text-center">
           <a
             href="https://docs.google.com/document/d/1vAmSsB_kaJ3fIPqA5lpv2ulIc0fAEltj/edit"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-sky-500 text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-sky-700 transition duration-300"
+            className="inline-block bg-sky-600 text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-sky-700 transition duration-300"
           >
             {t("learn_more")}
           </a>
         </div>
+      </section>
+
+      <section id="exam-preparation">
+        <div
+          className="relative bg-cover bg-center py-24 md:py-32 my-16 shadow-lg"
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_6.jpg)`,
+            backgroundAttachment: "fixed",
+          }}
+          aria-label="Exam Preparation"
+        >
+          <div className="absolute inset-0 bg-black opacity-50" />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 relative z-10">
+            {t("exam_preparation")}
+          </h2>
+        </div>
+        <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
+          {t("exam_preparation_description")}
+        </p>
+      </section>
+
+      <section id="baccalaureat-program">
+        <div
+          className="relative bg-cover bg-center py-24 md:py-32 my-16 shadow-lg"
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_7.jpg)`,
+            backgroundAttachment: "fixed",
+          }}
+          aria-label="Baccalaureat Program"
+        >
+          <div className="absolute inset-0 bg-black opacity-50" />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 relative z-10">
+            {t("baccalaureat_program")}
+          </h2>
+        </div>
+        <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
+          {t("baccalaureat_program_description")}
+        </p>
+      </section>
+
+      <section id="private-courses">
+        <div
+          className="relative bg-cover bg-center py-24 md:py-32 my-16 shadow-lg"
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/en_8.jpg)`,
+            backgroundAttachment: "fixed",
+          }}
+          aria-label="Private Courses"
+        >
+          <div className="absolute inset-0 bg-black opacity-50" />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 relative z-10">
+            {t("private_courses")}
+          </h2>
+        </div>
+        <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
+          {t("private_courses_description")}
+        </p>
       </section>
     </div>
   );

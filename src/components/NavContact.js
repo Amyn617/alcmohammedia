@@ -7,8 +7,8 @@ import {
 
 const NavContact = () => {
   return (
-    <div className="hidden xl:flex items-center justify-center  bg-blue-900 text-white p-3 text-base">
-      <ul className="nav-contact flex gap-28">
+    <div className="hidden xl:flex items-center justify-center bg-blue-900 text-white py-3 text-base">
+      <ul className="nav-contact flex gap-12 2xl:gap-28">
         <li className="flex items-center">
           <a
             href="mailto:admin@alcmohammedia.com"

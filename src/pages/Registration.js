@@ -288,6 +288,279 @@ const Registration = () => {
                 </tbody>
               </table>
             </div>
+            <hr />
+            <h3 className="text-2xl font-semibold my-5">{t("teens")}</h3>
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-sky-500 text-white">
+                  <tr>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("level")}
+                    </th>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("alc_level")}
+                    </th>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("cefr")}
+                    </th>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("hours")}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {[
+                    {
+                      level: t("beginning"),
+                      alcLevel: "T1, T2, T3",
+                      cefr: "A1",
+                      hours: `90 ${t("hours")}`,
+                    },
+                    {
+                      level: t("beginning"),
+                      alcLevel: "T4, T5, T6",
+                      cefr: "A2",
+                      hours: `90 ${t("hours")}`,
+                    },
+                    {
+                      level: t("pre_intermediate"),
+                      alcLevel: "T7",
+                      cefr: "A2",
+                      hours: `30 ${t("hours")}`,
+                    },
+                    {
+                      level: t("pre_intermediate"),
+                      alcLevel: "T8",
+                      cefr: "A2/B1",
+                      hours: `30 ${t("hours")}`,
+                    },
+                    {
+                      level: t("pre_intermediate"),
+                      alcLevel: "T9",
+                      cefr: "B1",
+                      hours: `30 ${t("hours")}`,
+                    },
+                    {
+                      level: t("intermediate"),
+                      alcLevel: "T10, T11, T12",
+                      cefr: "B1",
+                      hours: `90 ${t("hours")}`,
+                    },
+                    {
+                      level: t("intermediate"),
+                      alcLevel: "T13, T14, T15",
+                      cefr: "B2",
+                      hours: `90 ${t("hours")}`,
+                    },
+                    {
+                      level: t("advanced"),
+                      alcLevel: "T16, T17, T19",
+                      cefr: "C1/C2",
+                      hours: `90 ${t("hours")}`,
+                    },
+                  ].map((row, index) => (
+                    <tr
+                      key={index}
+                      className={`hover:bg-gray-100 ${
+                        index % 2 === 0 ? "bg-gray-50" : "bg-white"
+                      }`}
+                    >
+                      <td className="px-4 py-2">{row.level}</td>
+                      <td className="px-4 py-2 whitespace-pre-line">
+                        {row.alcLevel}
+                      </td>
+                      <td className="px-4 py-2">{row.cefr}</td>
+                      <td className="px-4 py-2">{row.hours}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <hr />
+
+            <h3 className="text-2xl font-semibold my-5">{t("adults")}</h3>
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-sky-500 text-white">
+                  <tr>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("level")}
+                    </th>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("alc_level")}
+                    </th>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("cefr")}
+                    </th>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("hours")}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {[
+                    {
+                      alcLevel: t("beginning"),
+                      levels: "Beg1, Beg2, Beg3",
+                      cefr: "A1",
+                      hours: `90 ${t("hours")}`,
+                    },
+                    {
+                      alcLevel: t("beginning"),
+                      levels: "Beg4, Beg5, Beg6",
+                      cefr: "A2",
+                      hours: `90 ${t("hours")}`,
+                    },
+                    {
+                      alcLevel: t("pre_intermediate"),
+                      levels: "Pre-Int1, Pre-Int2, Pre-Int3",
+                      cefr: "B1",
+                      hours: `90 ${t("hours")}`,
+                    },
+                    {
+                      alcLevel: t("intermediate"),
+                      levels: "Int1, Int2, Int3",
+                      cefr: "B1+",
+                      hours: `90 ${t("hours")}`,
+                    },
+                    {
+                      alcLevel: t("intermediate"),
+                      levels: "Int4, Int5, Int6",
+                      cefr: "B2",
+                      hours: `90 ${t("hours")}`,
+                    },
+                    {
+                      alcLevel: t("advanced"),
+                      levels: "Adv1, Adv2, Adv3, Adv4, Adv5, Adv6",
+                      cefr: "C1/C2",
+                      hours: `90 ${t("hours")}`,
+                    },
+                  ].map((row, index) => (
+                    <tr
+                      key={index}
+                      className={`hover:bg-gray-100 ${
+                        index % 2 === 0 ? "bg-gray-50" : "bg-white"
+                      }`}
+                    >
+                      <td className="px-4 py-2">{row.alcLevel}</td>
+                      <td className="px-4 py-2 whitespace-pre-line">
+                        {row.levels}
+                      </td>
+                      <td className="px-4 py-2">{row.cefr}</td>
+                      <td className="px-4 py-2">{row.hours}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <hr />
+
+            <h3 className="text-2xl font-semibold my-5">
+              {t("objective_proficiency")}
+            </h3>
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-sky-500 text-white">
+                  <tr>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("alc_level")}
+                    </th>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("cefr")}
+                    </th>
+                    <th
+                      className={`px-4 py-2 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      {t("hours")}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {[
+                    {
+                      alcLevel: `${t("proficiency")} 1`,
+                      cefr: "C2",
+                      hours: `30 ${t("hours")}`,
+                    },
+                    {
+                      alcLevel: `${t("proficiency")} 2`,
+                      cefr: "C2",
+                      hours: `30 ${t("hours")}`,
+                    },
+                    {
+                      alcLevel: `${t("proficiency")} 3`,
+                      cefr: "C2",
+                      hours: `30 ${t("hours")}`,
+                    },
+                    {
+                      alcLevel: `${t("proficiency")} 4`,
+                      cefr: "C2",
+                      hours: `30 ${t("hours")}`,
+                    },
+                    {
+                      alcLevel: `${t("proficiency")} 5`,
+                      cefr: "C2",
+                      hours: `30 ${t("hours")}`,
+                    },
+                  ].map((row, index) => (
+                    <tr
+                      key={index}
+                      className={`hover:bg-gray-100 ${
+                        index % 2 === 0 ? "bg-gray-50" : "bg-white"
+                      }`}
+                    >
+                      <td className="px-4 py-2">{row.alcLevel}</td>
+                      <td className="px-4 py-2">{row.cefr}</td>
+                      <td className="px-4 py-2">{row.hours}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
       </div>

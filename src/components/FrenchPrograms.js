@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { LanguageContext } from "./LanguageContext";
 
 const FrenchPrograms = () => {
+  const { t, language } = useContext(LanguageContext);
   const location = useLocation();
 
   const [scrollY, setScrollY] = useState(0);
@@ -47,10 +49,13 @@ const FrenchPrograms = () => {
   }, [location]);
 
   return (
-    <div className="bg-gray-100 py-12">
+    <div
+      dir={`${language === "ar" ? "rtl" : "ltr"}`}
+      className="bg-gray-100 py-12"
+    >
       <div className="text-center mb-8">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-500">
-          French Programs
+          {t("french_program")}
         </h1>
         <p className="text-base md:text-lg text-gray-700 mt-2">
           Explore a World of French Language Excellence
@@ -63,13 +68,12 @@ const FrenchPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_1.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="General French"
         >
           <div className="absolute inset-0 bg-black opacity-50" />
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 relative z-10">
-            General French
+            {t("general_french")}
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
@@ -88,13 +92,12 @@ const FrenchPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_2.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Professional French"
         >
           <div className="absolute inset-0 bg-black opacity-50" />
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 relative z-10">
-            Professional French
+            {t("professional_french")}
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
@@ -113,13 +116,12 @@ const FrenchPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_3.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Communication: Oral/Written"
         >
           <div className="absolute inset-0 bg-black opacity-50" />
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 relative z-10">
-            Communication: Oral/Written
+            {t("communication_french")}
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
@@ -138,13 +140,12 @@ const FrenchPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_4.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Exam Preparation (DELF B1 - B2, DALF, and TCF)"
         >
           <div className="absolute inset-0 bg-black opacity-50" />
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 relative z-10">
-            Exam Preparation (DELF B1 - B2, DALF, and TCF)
+            {t("exam_preparation_french")}
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
@@ -163,13 +164,12 @@ const FrenchPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_5.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="Regional French (6th Year High School)"
         >
           <div className="absolute inset-0 bg-black opacity-50" />
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 relative z-10">
-            Regional French (6th Year High School)
+            {t("regional_french")}
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
@@ -187,13 +187,12 @@ const FrenchPrograms = () => {
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/fr_6.jpg)`,
             backgroundAttachment: "fixed",
-            backgroundPosition: `center ${scrollY * -0.1}px`,
           }}
           aria-label="French (9th Year Middle School)"
         >
           <div className="absolute inset-0 bg-black opacity-50" />
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 relative z-10">
-            French (9th Year Middle School)
+            {t("french_middle_school")}
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
