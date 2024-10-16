@@ -58,7 +58,7 @@ const FrenchPrograms = () => {
           {t("french_program")}
         </h1>
         <p className="text-base md:text-lg text-gray-700 mt-2">
-          Explore a World of French Language Excellence
+          {t("exploreWorldOfFrench")}
         </p>
       </div>
 
@@ -77,12 +77,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          Our General French program is designed for learners of all levels,
-          focusing on developing foundational skills in reading, writing,
-          speaking, and listening. Classes emphasize interactive learning and
-          practical usage of the language, making it ideal for students looking
-          to enhance their everyday communication skills and cultural
-          understanding.
+        {t("general_french_desc")}
         </p>
       </section>
 
@@ -101,12 +96,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          The Professional French program caters to individuals aiming to
-          improve their language skills for the workplace. This course covers
-          business vocabulary, formal communication, and essential skills for
-          various professional contexts. Participants will engage in
-          role-playing, case studies, and industry-specific terminology to build
-          confidence in their professional interactions.
+        {t("professional_french_desc")}
         </p>
       </section>
 
@@ -125,12 +115,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          Our Communication program focuses on enhancing both oral and written
-          French proficiency. Through dynamic exercises and discussions,
-          students will improve their fluency and comprehension, honing their
-          ability to express ideas clearly and effectively. This program is
-          suitable for anyone looking to elevate their communication skills in a
-          French-speaking environment.
+        {t("communication_french_desc")}
         </p>
       </section>
 
@@ -149,12 +134,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          Our Exam Preparation program is tailored for students aiming to take
-          the DELF B1, DELF B2, DALF, or TCF exams. This course provides
-          comprehensive review materials, practice tests, and strategies for
-          success. Instructors will guide students through the exam format,
-          helping them to build the necessary skills and confidence to achieve
-          their desired scores.
+        {t("exam_preparation_french_desc")}
         </p>
       </section>
 
@@ -173,11 +153,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          The Regional French program is specifically designed for 6th-year high
-          school students. This course focuses on cultural aspects of the
-          Francophone world while reinforcing grammar and vocabulary. Students
-          will explore regional dialects, traditions, and literature, enriching
-          their understanding of the diverse French-speaking communities.
+        {t("regional_french_desc")}
         </p>
       </section>
 
@@ -196,12 +172,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-          Our 9th Year Middle School French program offers a comprehensive
-          introduction to the language for younger learners. The curriculum
-          includes interactive activities, games, and projects to engage
-          students and foster a love for the French language. Emphasis is placed
-          on foundational skills, preparing students for future language studies
-          and cultural exploration.
+        {t("french_middle_school_desc")}
         </p>
       </section>
     </div>
