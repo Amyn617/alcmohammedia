@@ -48,6 +48,11 @@ const HeroSection = () => {
                 Le <span className='text-gradient'>{t("hero_main")}</span> de Mohammedia
               </>
             )}
+            {language === 'es' && (
+              <>
+                El <span className='text-gradient'>{t("hero_main")}</span> de Mohammedia
+              </>
+            )}
           </h1>
           <p className="text-lg">
             {t("hero_sub")}

@@ -2,6 +2,12 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import { LanguageContext } from "./LanguageContext";
 import { FaChevronDown, FaBars } from "react-icons/fa";
 
+const defaultLanguage = {
+  code: "en",
+  name: "English",
+  flag: "https://flagsapi.com/US/flat/64.png",
+};
+
 const NavBar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -32,6 +38,11 @@ const NavBar = () => {
       flag: "https://flagsapi.com/FR/flat/64.png",
     },
     {
+      code: "es",
+      name: "Español",
+      flag: "https://flagsapi.com/ES/flat/64.png",
+    },
+    {
       code: "ar",
       name: "العربية",
       flag: "https://flagsapi.com/MA/flat/64.png",
@@ -54,6 +65,8 @@ const NavBar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [sidebarActive]);
+
+  const currentLanguage = languages.find((lang) => lang.code === language) || defaultLanguage;
 
   return (
     <div className="sticky z-50 top-0">
@@ -278,9 +291,9 @@ const NavBar = () => {
         >
           <div className="flex items-center cursor-pointer">
             <img
-              src={languages.find((lang) => lang.code === language).flag}
+              src={currentLanguage.flag}
               width="30"
-              alt={language}
+              alt={currentLanguage.code}
             />
             <FaChevronDown className="ml-2 text-sm" />
           </div>

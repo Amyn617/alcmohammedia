@@ -193,6 +193,15 @@
   "communication_french_desc": "Our Communication program focuses on enhancing both oral and written French proficiency. Through dynamic exercises and discussions, students will improve their fluency and comprehension, honing their ability to express ideas clearly and effectively. This program is suitable for anyone looking to elevate their communication skills in a French-speaking environment.",
   "exam_preparation_french_desc": "Our Exam Preparation program is tailored for students aiming to take the DELF B1, DELF B2, DALF, or TCF exams. This course provides comprehensive review materials, practice tests, and strategies for success. Instructors will guide students through the exam format, helping them build the necessary skills and confidence to achieve their desired scores.",
   "regional_french_desc": "The Regional French program is specifically designed for 6th-year high school students preparing for the regional exam in Morocco. This course focuses on reinforcing grammar, vocabulary, and writing skills while enhancing students' understanding of key exam topics. Through exam preparation exercises and discussions on Francophone culture, students will gain the knowledge and confidence needed to excel in their regional exam.",
-  "french_middle_school_desc": "Our 9th Year Middle School French program is designed for students preparing for the national exam in Morocco. The curriculum emphasizes foundational language skills such as grammar, vocabulary, and reading comprehension. Through interactive activities, exam practice, and engaging projects, students are well-prepared for the exam while developing a solid understanding of the French language and culture."
-, "exploreWorldOfFrench": "Explore a World of French Language Excellence"
+  "french_middle_school_desc": "Our 9th Year Middle School French program is designed for students preparing for the national exam in Morocco. The curriculum emphasizes foundational language skills such as grammar, vocabulary, and reading comprehension. Through interactive activities, exam practice, and engaging projects, students are well-prepared for the exam while developing a solid understanding of the French language and culture.",
+  "exploreWorldOfFrench": "Explore a World of French Language Excellence",
+  "notFound404": "404",
+  "pageNotFoundTitle": "Oops! The page you are looking for does not exist.",
+  "pageNotFoundDescription": "Please check the URL or return home.",
+  "goToHome": "Go to Home",
+  "socialMedia": "Social Media",
+  "followUsOn": "Follow us on",
+  "stayUpdated": "Stay updated with our latest photos and events",
+  "instagramLoadError": "Failed to load Instagram feed",
+  "noPostsFound": "No posts found"
 }

@@ -195,8 +195,10 @@ const EnglishPrograms = () => {
           </div>
         </div>
         <div className="mt-16 text-center">
-          <a
+          <a 
             href="https://docs.google.com/document/d/1vAmSsB_kaJ3fIPqA5lpv2ulIc0fAEltj/edit"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-sky-600 text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-sky-700 transition duration-300"
           >
             {t("learn_more")}

@@ -5,26 +5,35 @@ const Partners = () => {
   const { t, language } = useContext(LanguageContext);
 
   const logos = [
-    { src: `${process.env.PUBLIC_URL}/assets/images/ACA.svg`, alt: "ACA", name: "ACA" },
+    { 
+      src: `${process.env.PUBLIC_URL}/assets/images/ACA.svg`, 
+      alt: "ACA", 
+      name: "ACA",
+      url: "https://www.aca.org.ma"
+    },
     {
       src: `${process.env.PUBLIC_URL}/assets/images/CSC_Mohammedia.png`,
       alt: "CSC Mohammedia",
       name: "CSC Mohammedia",
+      url: "https://www.instagram.com/csc_mohammedia/"
     },
     {
       src: `${process.env.PUBLIC_URL}/assets/images/Brainlyne.png`,
       alt: "Brainlyne",
       name: "Brainlyne",
+      url: "https://www.brainlyne.com"
     },
     {
       src: `${process.env.PUBLIC_URL}/assets/images/US_Embassy_Morocco.png`,
       alt: "US Embassy Morocco",
       name: "US Embassy Morocco",
+      url: "https://ma.usembassy.gov"
     },
     {
       src: `${process.env.PUBLIC_URL}/assets/images/Association_Nahdat_Zenata.png`,
       alt: "Association Nahdat Zenata",
       name: "Association Nahdat Zenata",
+      url: "https://nahdatzenata.wixsite.com/"
     },
   ];
 
@@ -48,12 +57,19 @@ const Partners = () => {
         <div className="flex flex-wrap justify-center gap-4">
           {logos.map((logo, index) => (
             <div key={index} className="flex items-center justify-center">
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="h-20 lg:h-28 hover:scale-110 object-contain mx-10 grayscale opacity-50 transition-all duration-500 hover:opacity-100 hover:grayscale-0 cursor-pointer"
-                title={logo.name}
-              />
+              <a 
+                href={logo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-110"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-20 lg:h-28 object-contain mx-10 grayscale opacity-50 transition-all duration-500 hover:opacity-100 hover:grayscale-0"
+                  title={logo.name}
+                />
+              </a>
             </div>
           ))}
         </div>
