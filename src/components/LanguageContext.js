@@ -1,8 +1,8 @@
 import { createContext, useState, useEffect } from 'react'; 
-import en from "./locales/en.json";
-import ar from "./locales/ar.json";
-import fr from "./locales/fr.json";
-import es from "./locales/es.json";
+import en from "../translations/en.json";
+import ar from "../translations/ar.json";
+import fr from "../translations/fr.json";
+import es from "../translations/es.json";
 
 const translations = { en, ar, fr, es };
 

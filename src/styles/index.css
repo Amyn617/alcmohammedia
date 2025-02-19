@@ -37,6 +37,7 @@ body {
   background: linear-gradient(45deg, #ff007f, #fff, #00cfff);
   background-size: 300% 300%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-animation 8s ease infinite;
 }
