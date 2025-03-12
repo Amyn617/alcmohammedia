@@ -20,7 +20,7 @@ const NotFound = () => {
           {t('pageNotFoundTitle')} {t('pageNotFoundDescription')}
         </p>
         <a
-          href="/#"
+          href="/"
           className="mt-6 px-6 py-3 text-white bg-sky-500 rounded-lg shadow-lg hover:bg-sky-700 transition duration-300 transform hover:scale-105"
         >
           {t('goToHome')}

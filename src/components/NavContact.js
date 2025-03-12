@@ -1,9 +1,6 @@
 import {
   FaEnvelope,
-  FaFacebook,
-  FaInstagram,
-  FaMapMarkerAlt,
-  FaLinkedin,
+  FaMapMarkerAlt
 } from "react-icons/fa";
 
 const NavContact = () => {

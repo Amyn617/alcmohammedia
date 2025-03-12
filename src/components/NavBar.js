@@ -1,4 +1,10 @@
-import React, { useContext, useState, useEffect, useRef } from "react";
+import React, {
+  useContext,
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { LanguageContext } from "./LanguageContext";
 import { FaChevronDown, FaBars } from "react-icons/fa";
@@ -41,7 +47,7 @@ const NavBar = () => {
       flag: "https://flagsapi.com/FR/flat/64.png",
     },
     {
-      code: "es",
+      code: "sp",
       name: "Español",
       flag: "https://flagsapi.com/ES/flat/64.png",
     },
@@ -52,22 +58,25 @@ const NavBar = () => {
     },
   ];
 
-  const handleClickOutside = (event) => {
-    if (
-      sidebarActive &&
-      sidebarRef.current &&
-      !sidebarRef.current.contains(event.target)
-    ) {
-      setSidebarActive(false);
-    }
-  };
+  const handleClickOutside = useCallback(
+    (event) => {
+      if (
+        sidebarActive &&
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target)
+      ) {
+        setSidebarActive(false);
+      }
+    },
+    [sidebarActive]
+  );
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [sidebarActive]);
+  }, [sidebarActive, handleClickOutside]);
 
   const currentLanguage =
     languages.find((lang) => lang.code === language) || defaultLanguage;
@@ -100,7 +109,7 @@ const NavBar = () => {
       <div className="flex items-center justify-between px-10 xl:px-20 bg-white shadow-md">
         <Link to="/" onClick={() => handleNavigation("/")}>
           <img
-            src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+            src={`${process.env.PUBLIC_URL}/assets/images/svg/logo.svg`}
             alt="ALC Mohammedia"
             className="w-56 lg:w-48 py-6"
           />
@@ -251,9 +260,9 @@ const NavBar = () => {
               .filter((lang) => lang.code !== language)
               .map((lang) => (
                 <li key={lang.code}>
-                  <a
+                  <button
                     onClick={() => handleLanguageChange(lang.code)}
-                    className="p-2 flex items-center hover:bg-sky-300 cursor-pointer"
+                    className="w-full p-2 flex items-center hover:bg-sky-300 cursor-pointer"
                   >
                     <img
                       src={lang.flag}
@@ -262,7 +271,7 @@ const NavBar = () => {
                       className="mr-2"
                     />
                     {lang.name}
-                  </a>
+                  </button>
                 </li>
               ))}
           </ul>

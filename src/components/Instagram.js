@@ -1,40 +1,34 @@
-import React, { useEffect, useState, useCallback, useContext } from "react";
+import React, { useEffect, useState, useContext, useCallback } from "react";
 import { LanguageContext } from "./LanguageContext";
 
 const LoadingSkeleton = () => (
   <div className="animate-pulse">
-    <div className="aspect-square bg-gray-200 rounded-xl"></div>
+    <div
+      className="bg-gray-200 rounded-xl"
+      style={{
+        aspectRatio: "4 / 5",
+      }}
+    ></div>
   </div>
 );
 
-const CarouselPost = ({ post }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+const usePreloadImages = (post, getSlideUrl) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isHovering, setIsHovering] = useState(false);
-  const [preloadedImages, setPreloadedImages] = useState([]);
 
-  const getSlideUrl = (index) => {
-    if (post.media_type === "CAROUSEL_ALBUM")
-      return post.children.data[index].media_url;
-    return post.media_type === "VIDEO" ? post.thumbnail_url : post.media_url;
-  };
-
-  // Preload all images when component mounts
   useEffect(() => {
     const preloadImages = async () => {
       if (post.media_type === "CAROUSEL_ALBUM") {
-        const imagePromises = post.children.data.map((child, index) => {
+        const imagePromises = post.children.data.map((_, index) => {
           return new Promise((resolve, reject) => {
             const img = new Image();
             img.src = getSlideUrl(index);
-            img.onload = () => resolve(img);
+            img.onload = resolve;
             img.onerror = reject;
           });
         });
 
         try {
-          const loadedImages = await Promise.all(imagePromises);
-          setPreloadedImages(loadedImages);
+          await Promise.all(imagePromises);
           setIsLoading(false);
         } catch (error) {
           console.error("Failed to preload some images");
@@ -44,14 +38,31 @@ const CarouselPost = ({ post }) => {
         const img = new Image();
         img.src = getSlideUrl(0);
         img.onload = () => {
-          setPreloadedImages([img]);
           setIsLoading(false);
         };
       }
     };
 
     preloadImages();
-  }, [post]);
+  }, [post, getSlideUrl]);
+
+  return { isLoading };
+};
+
+const CarouselPost = ({ post }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+
+  const getSlideUrl = useCallback(
+    (index) => {
+      if (post.media_type === "CAROUSEL_ALBUM")
+        return post.children.data[index].media_url;
+      return post.media_type === "VIDEO" ? post.thumbnail_url : post.media_url;
+    },
+    [post]
+  );
+
+  const { isLoading } = usePreloadImages(post, getSlideUrl);
 
   return (
     <a
@@ -62,7 +73,12 @@ const CarouselPost = ({ post }) => {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <div className="relative aspect-square overflow-hidden rounded-xl shadow-lg transition-all duration-500 bg-gray-100 group">
+      <div
+        className="relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 bg-gray-100 group"
+        style={{
+          aspectRatio: "4 / 5",
+        }}
+      >
         {isLoading && <LoadingSkeleton />}
 
         <div className="relative w-full h-full overflow-hidden">
@@ -164,13 +180,16 @@ const Instagram = () => {
     <div className="p-10 lg:p-20 bg-white" aria-label="instagram">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <p className="text-md text-red-500 mb-4 uppercase">{t("socialMedia")}</p>
-          <h2 className="text-3xl lg:text-5xl font-semibold mb-6 text-gray-500">
-            {t("followUsOn")} <span className="text-sky-500">{language === 'ar' ? 'انستغرام' : 'Instagram'}</span>
-          </h2>
-          <p className="text-gray-500 mb-8">
-            {t("stayUpdated")}
+          <p className="text-md text-red-500 mb-4 uppercase">
+            {t("socialMedia")}
           </p>
+          <h2 className="text-3xl lg:text-5xl font-semibold mb-6 text-gray-500">
+            {t("followUsOn")}{" "}
+            <span className="text-sky-500">
+              {language === "ar" ? "انستغرام" : "Instagram"}
+            </span>
+          </h2>
+          <p className="text-gray-500 mb-8">{t("stayUpdated")}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -48,7 +48,7 @@ const HeroSection = () => {
                 Le <span className='text-gradient'>{t("hero_main")}</span> de Mohammedia
               </>
             )}
-            {language === 'es' && (
+            {language === 'sp' && (
               <>
                 El <span className='text-gradient'>{t("hero_main")}</span> de Mohammedia
               </>

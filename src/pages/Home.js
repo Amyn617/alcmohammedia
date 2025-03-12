@@ -8,6 +8,7 @@ import Pedagogy from "../components/Pedagogy";
 import FAQs from "../components/FAQs";
 import Location from "../components/Location";
 import Partners from "../components/Partners";
+// import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import BackToTopButton from "../components/BackToTopButton";
 import ScrollAnimation from "../components/ScrollAnimation";
@@ -34,11 +35,14 @@ const Home = () => {
         <FAQs />
       </ScrollAnimation>
       <ScrollAnimation>
-        <Location />
-      </ScrollAnimation>
-      <ScrollAnimation>
         <Partners />
       </ScrollAnimation>
+      <ScrollAnimation>
+        <Location />
+      </ScrollAnimation>
+      {/* <ScrollAnimation>
+        <Contact />
+      </ScrollAnimation> */}
       <Footer />
       <BackToTopButton />
     </div>

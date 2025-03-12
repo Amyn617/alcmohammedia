@@ -6,31 +6,31 @@ const Partners = () => {
 
   const logos = [
     { 
-      src: `${process.env.PUBLIC_URL}/assets/images/ACA.svg`, 
+      src: `${process.env.PUBLIC_URL}/assets/images/svg/ACA.svg`, 
       alt: "ACA", 
       name: "ACA",
       url: "https://www.aca.org.ma"
     },
     {
-      src: `${process.env.PUBLIC_URL}/assets/images/CSC_Mohammedia.png`,
+      src: `${process.env.PUBLIC_URL}/assets/images/svg/CSC_Mohammedia.svg`,
       alt: "CSC Mohammedia",
       name: "CSC Mohammedia",
       url: "https://www.instagram.com/csc_mohammedia/"
     },
     {
-      src: `${process.env.PUBLIC_URL}/assets/images/Brainlyne.png`,
+      src: `${process.env.PUBLIC_URL}/assets/images/svg/Brainlyne.svg`,
       alt: "Brainlyne",
       name: "Brainlyne",
       url: "https://www.brainlyne.com"
     },
     {
-      src: `${process.env.PUBLIC_URL}/assets/images/US_Embassy_Morocco.png`,
+      src: `${process.env.PUBLIC_URL}/assets/images/svg/US_Embassy_Morocco.svg`,
       alt: "US Embassy Morocco",
       name: "US Embassy Morocco",
       url: "https://ma.usembassy.gov"
     },
     {
-      src: `${process.env.PUBLIC_URL}/assets/images/Association_Nahdat_Zenata.png`,
+      src: `${process.env.PUBLIC_URL}/assets/images/svg/Association_Nahdat_Zenata.svg`,
       alt: "Association Nahdat Zenata",
       name: "Association Nahdat Zenata",
       url: "https://nahdatzenata.wixsite.com/"

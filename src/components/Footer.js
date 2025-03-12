@@ -7,33 +7,41 @@ const SocialLink = ({ icon, link, prefix = "solid" }) => (
     href={link}
     target="_blank"
     rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-500 hover:scale-110 transition-all duration-300"
+    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:text-red-500 hover:scale-110 transition-all duration-300"
     aria-label={`Visit our ${icon} page`}
   >
     <i className={`fa-${prefix} fa-${icon} text-base`}></i>
   </a>
 );
 
-const NavLink = ({ to, children }) => (
-  <li>
-    <Link
-      to={to}
-      className="group flex items-center gap-2 hover:text-red-500 transition-all duration-300"
-    >
-      <span className="opacity-0 group-hover:opacity-100 transition-opacity">
-        <i className="fa-solid fa-chevron-right text-xs"></i>
-      </span>
-      <span className="group-hover:translate-x-1 transition-transform">
-        {children}
-      </span>
-    </Link>
-  </li>
-);
-
 const Footer = () => {
   const navigate = useNavigate();
   const { t, language } = useContext(LanguageContext);
   const isArabic = language === "ar";
+
+  const NavLink = ({ to, children }) => (
+    <li>
+      <Link
+        to={to}
+        className="group flex items-center gap-2 hover:text-red-500 transition-all duration-300"
+      >
+        <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+          <i
+            className={`fa-solid fa-chevron-${
+              isArabic ? "left" : "right"
+            } text-xs`}
+          ></i>
+        </span>
+        <span
+          className={`group-hover:translate-x-${
+            isArabic ? "-1" : "1"
+          } transition-transform`}
+        >
+          {children}
+        </span>
+      </Link>
+    </li>
+  );
 
   const contactInfo = [
     {
@@ -47,7 +55,11 @@ const Footer = () => {
       text: "admin@alcmohammedia.com",
       link: "mailto:admin@alcmohammedia.com",
     },
-    { icon: "link", text: "All Links", link: "#links" },
+    {
+      icon: "link",
+      text: "All Links",
+      link: "https://linktr.ee/alcmohammedia",
+    },
   ];
 
   const handleNavigation = (path) => {
@@ -61,13 +73,12 @@ const Footer = () => {
         isArabic ? "text-right" : "text-left"
       }`}
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/footer-bg.svg)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/svg/footer-bg.svg)`,
       }}
       dir={isArabic ? "rtl" : "ltr"}
     >
       <div className="container mx-auto px-6 md:px-8 lg:px-12 py-16 lg:py-20">
         <div className="grid gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Logo and Description Section */}
           <div className="space-y-6">
             <Link
               to="/"
@@ -75,7 +86,7 @@ const Footer = () => {
               className="block w-36 sm:w-48 transition-transform hover:scale-105"
             >
               <img
-                src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                src={`${process.env.PUBLIC_URL}/assets/images/svg/logo.svg`}
                 alt={t("alcLogo")}
                 className="brightness-0 invert"
               />
@@ -103,9 +114,12 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links Section */}
           <div className="space-y-6">
-            <h3 className="text-xl text-white font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-red-500 pb-3">
+            <h3
+              className={`text-xl text-white font-semibold relative pb-3 ${
+                isArabic ? "after:right-0" : "after:left-0"
+              } after:absolute after:bottom-0 after:w-12 after:h-1 after:bg-red-500`}
+            >
               {t("alcMohammedia")}
             </h3>
             <nav aria-label="Footer navigation">
@@ -132,7 +146,11 @@ const Footer = () => {
 
           {/* External Links Section */}
           <div className="space-y-6">
-            <h3 className="text-xl text-white font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-red-500 pb-3">
+            <h3
+              className={`text-xl text-white font-semibold relative pb-3 ${
+                isArabic ? "after:right-0" : "after:left-0"
+              } after:absolute after:bottom-0 after:w-12 after:h-1 after:bg-red-500`}
+            >
               {t("links")}
             </h3>
             <ul className="space-y-3 text-base">
@@ -141,7 +159,7 @@ const Footer = () => {
                   href="https://aca.org.ma/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-red-500 transition-colors inline-block hover:translate-x-2 duration-300"
+                  className="hover:text-red-500 transition-all inline-block hover:translate-x-1 duration-300"
                 >
                   {t("aca")}
                 </a>
@@ -151,7 +169,7 @@ const Footer = () => {
                   href="https://aca.org.ma/contact-3/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-red-500 transition-colors inline-block hover:translate-x-2 duration-300"
+                  className="hover:text-red-500 transition-all inline-block hover:translate-x-1 duration-300"
                 >
                   {t("allAlcs")}
                 </a>
@@ -161,7 +179,11 @@ const Footer = () => {
 
           {/* Social Media Section */}
           <div className="space-y-6">
-            <h3 className="text-xl text-white font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-red-500 pb-3">
+            <h3
+              className={`text-xl text-white font-semibold relative pb-3 ${
+                isArabic ? "after:right-0" : "after:left-0"
+              } after:absolute after:bottom-0 after:w-12 after:h-1 after:bg-red-500`}
+            >
               {t("contacts")}
             </h3>
             <div dir="ltr" className="flex flex-wrap gap-4">
@@ -208,7 +230,7 @@ const Footer = () => {
             <Link
               to="/"
               onClick={() => handleNavigation("/")}
-              className="text-sky-400 hover:text-red-500 transition-colors"
+              className="text-sky-400 hover:text-red-500 transition-all"
             >
               {t("alcMohammedia")}
             </Link>
