@@ -5,7 +5,7 @@ import { LanguageContext } from "./LanguageContext";
 const EnglishPrograms = () => {
   const { t, language } = useContext(LanguageContext);
   const location = useLocation();
-  const [scrollY, setScrollY] = useState(0);
+  const [setScrollY] = useState(0);
 
   const handleScroll = () => {
     setScrollY(window.scrollY);

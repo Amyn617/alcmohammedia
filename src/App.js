@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense } from "react";
 import { LanguageProvider } from "./components/LanguageContext";
 import {
   BrowserRouter as Router,
@@ -7,7 +7,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import { routes } from "./routes/routeConfig";
-
 
 const App = () => {
   const basename = process.env.PUBLIC_URL || "";
@@ -26,25 +25,25 @@ const App = () => {
 
   return (
     <LanguageProvider>
-        <Router basename={basename}>
-          <Suspense fallback={null}>
-              <Routes>
-                {routes.map(({ path, element: Element, sections }) => (
-                  <React.Fragment key={path}>
-                    <Route path={path} element={<Element />} />
-                    {sections?.map((section) => (
-                      <Route
-                        key={`${path}/${section}`}
-                        path={`${path}/${section}`}
-                        element={<Element />}
-                      />
-                    ))}
-                  </React.Fragment>
+      <Router basename={basename}>
+        <Suspense fallback={null}>
+          <Routes>
+            {routes.map(({ path, element: Element, sections }) => (
+              <React.Fragment key={path}>
+                <Route path={path} element={<Element />} />
+                {sections?.map((section) => (
+                  <Route
+                    key={`${path}/${section}`}
+                    path={`${path}/${section}`}
+                    element={<Element />}
+                  />
                 ))}
-                <Route path="/home" element={<Navigate to="/" replace />} />
-              </Routes>
-          </Suspense>
-        </Router>
+              </React.Fragment>
+            ))}
+            <Route path="/home" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
+      </Router>
     </LanguageProvider>
   );
 };
