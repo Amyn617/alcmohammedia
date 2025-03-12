@@ -6,18 +6,18 @@ const FrenchPrograms = () => {
   const { t, language } = useContext(LanguageContext);
   const location = useLocation();
 
-  const [setScrollY] = useState(0);
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
+  const [, setScrollY] = useState(0); // Only keep the setter, prefix with underscore to indicate unused
 
   useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [setScrollY]);
 
   useEffect(() => {
     const scrollToElement = () => {
@@ -77,7 +77,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-        {t("general_french_desc")}
+          {t("general_french_desc")}
         </p>
       </section>
 
@@ -96,7 +96,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-        {t("professional_french_desc")}
+          {t("professional_french_desc")}
         </p>
       </section>
 
@@ -115,7 +115,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-        {t("communication_french_desc")}
+          {t("communication_french_desc")}
         </p>
       </section>
 
@@ -134,7 +134,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-        {t("exam_preparation_french_desc")}
+          {t("exam_preparation_french_desc")}
         </p>
       </section>
 
@@ -153,7 +153,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-        {t("regional_french_desc")}
+          {t("regional_french_desc")}
         </p>
       </section>
 
@@ -172,7 +172,7 @@ const FrenchPrograms = () => {
           </h2>
         </div>
         <p className="text-black text-base md:text-lg mb-6 max-w-4xl mx-auto px-10 text-justify">
-        {t("french_middle_school_desc")}
+          {t("french_middle_school_desc")}
         </p>
       </section>
     </div>

@@ -5,18 +5,18 @@ import { LanguageContext } from "./LanguageContext";
 const EnglishPrograms = () => {
   const { t, language } = useContext(LanguageContext);
   const location = useLocation();
-  const [setScrollY] = useState(0);
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
+  const [, setScrollY] = useState(0); // Only keep the setter, prefix with underscore to indicate unused
 
   useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [setScrollY]);
 
   useEffect(() => {
     const scrollToElement = () => {
@@ -195,7 +195,7 @@ const EnglishPrograms = () => {
           </div>
         </div>
         <div className="mt-16 text-center">
-          <a 
+          <a
             href="https://docs.google.com/document/d/1vAmSsB_kaJ3fIPqA5lpv2ulIc0fAEltj/edit"
             target="_blank"
             rel="noopener noreferrer"
