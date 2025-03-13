@@ -41,7 +41,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b gh-pages -f"
+    "clean-gh-pages": "rimraf node_modules/.cache/gh-pages",
+    "deploy": "npm run clean-gh-pages && gh-pages -d build --git git -b gh-pages"
   },
   "eslintConfig": {
     "extends": [
